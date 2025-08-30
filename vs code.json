@@ -1,0 +1,223 @@
+{
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "mouseover",
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "window.autoDetectColorScheme": true,
+  "editor.lineHeight": 1.8,
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "update.mode": "default",
+  "files.trimTrailingWhitespace": true,
+  "window.commandCenter": true,
+  "python.defaultInterpreterPath": "c:\\Users\\Javier\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "git.autofetch": true,
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "scm.inputFontSize": 14,
+  "workbench.editor.empty.hint": "text",
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "terminal.integrated.enableImages": true,
+  "git.enableSmartCommit": true,
+  "scm.countBadge": "off",
+  "scm.autoReveal": false,
+  "scm.diffDecorations": "gutter",
+  "scm.diffDecorationsGutterAction": "diff",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss19', 'ss20', 'ss21', 'ss22', 'ss23', 'ss24', 'ss25', 'ss26', 'ss27', 'ss28', 'ss29', 'ss30', 'ss31', 'ss32', 'ss33', 'ss34', 'ss35', 'ss36', 'ss37', 'ss38', 'ss39', 'ss40', 'ss41', 'ss42', 'ss43', 'ss44', 'ss45', 'ss46', 'ss47', 'ss48', 'ss49', 'ss50', 'ss51', 'ss52', 'ss53', 'ss54', 'ss55', 'ss56', 'ss57', 'ss58', 'ss59', 'ss60', 'ss61', 'ss62', 'ss63', 'ss64', 'zero', 'onum', 'frac', 'sups', 'subs', 'ordn', 'calt', 'salt', 'init', 'medi', 'fina', 'isol', 'fin2', 'fin3', 'med2', 'med3', 'fina2', 'fina3', 'init2', 'init3', 'rlig', 'liga', 'clig', 'hlig', 'dlig', 'cswh', 'cswl', 'calt'",
+  "editor.cursorBlinking": "expand",
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": true,
+  "editor.stickyScroll.enabled": true,
+  "notebook.stickyScroll.enabled": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  "workbench.colorCustomizations": {
+    "editor.foreground": "#D9E0EE",
+    "editor.background": "#191724",
+    "editor.lineHighlightBackground": "#191724",
+    "editorGroup.dropBackground": "#191724",
+    "editorGroupHeader.tabsBackground": "#191724",
+    "editorGropuHeader.tabsBorder": "#c0a6ea",
+    "editorGutter.background": "#191724",
+    "editorCursor.background": "#c0a6ea",
+    "editorHoverWidget.background": "#191724",
+    "panel.background": "#191724",
+    "editorSuggestWidget.background": "#191724",
+    "statusBarItem.remoteBackground": "#c0a6f7",
+    "statusBarItem.remoteForeground": "#191724",
+    "tab.activeBorder": "#eb6f92",
+    "tab.unfocusedActiveBorder": "#ff000000",
+    "menu.background": "#191724",
+    "editorCursor.foreground": "#eb6f92"
+  },
+
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "terminal.integrated.enableVisualBell": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "vscode-pets.petColor": "white",
+  "vscode-pets.petSize": "small",
+  "vscode-pets.petType": "fox",
+  "vscode-pets.theme": "forest",
+  "vscode-pets.throwBallWithMouse": true,
+  "javascript.suggest.paths": true,
+
+  "workbench.sideBar.location": "right",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.sqlite3": "default",
+    "*.svg": "cweijan.officeViewer"
+  },
+  "terminal.integrated.fontLigatures.enabled": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.guides.bracketPairsHorizontal": false,
+  "python.createEnvironment.trigger": "off",
+  "git.confirmSync": false,
+  "projectManager.git.baseFolders": ["D:\\Projects"],
+  "diffEditor.maxComputationTime": 0,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.size": "fill",
+  "python.analysis.completeFunctionParens": true,
+  "java.saveActions.organizeImports": true,
+  "workbench.editor.enablePreview": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.userFileIndexingLimit": -1,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "[django-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "files.associations": {
+    "*.pl": "prolog"
+  },
+
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches"
+  ],
+  "hediet.vscode-drawio.resizeImages": null,
+  "workbench.activityBar.location": "top",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "supermaven.otherWarning": false,
+  "workbench.editor.alwaysShowEditorActions": true,
+  "supermaven.enable": {
+    "*": false
+  },
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.enableOnDiffView": true,
+  "errorLens.fontStyleItalic": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.problemRangeDecorationEnabled": true,
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarIconsEnabled": true,
+  "errorLens.codeLensTemplate": "$severity $message $source $code",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+
+  "files.readonlyInclude": {
+    "**/.cargo/registry/src/**/*.rs": true,
+    "**/.cargo/git/checkouts/**/*.rs": true,
+    "**/lib/rustlib/src/rust/library/**/*.rs": true
+  },
+  "rust-analyzer.showSyntaxTree": true,
+  "rust-analyzer.linkedProjects": [
+    "D:\\Projects\\Rust\\Conversor De Unidades\\Cargo.toml"
+  ],
+  "workbench.preferredDarkColorTheme": "Rosé Noctis",
+  "supermaven.enableFixWithSupermaven": false,
+  "git.blame.statusBarItem.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "rust-analyzer.diagnostics.previewRustcOutput": true,
+  "dbcode.history.enabled": true,
+  "dbcode.resultLocation": "panel",
+  "redhat.telemetry.enabled": false,
+  "breadcrumbs.enabled": false,
+  "hediet.vscode-drawio.codeLinkActivated": true,
+  "editor.largeFileOptimizations": false,
+  "hediet.vscode-drawio.theme": "min",
+  "hediet.vscode-drawio.appearance": "dark",
+  "vscode-office.openOutline": false,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop"
+  ],
+  "update.showReleaseNotes": false,
+  "dbcode.pagination": true,
+  "chat.mcp.discovery.enabled": true,
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  "chat.mcp.autostart": "newAndOutdated",
+  "debugpy.showPythonInlineValues": true,
+  "vscode-office.editorTheme": "Auto",
+  "chat.agent.maxRequests": 10000000000000,
+  "terminal.integrated.suggest.enabled": true,
+  "editor.formatOnSave": true,
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.analysis.cacheLSPData": true,
+  "jupyter.enableExtendedPythonKernelCompletions": true,
+  "python.analysis.fixAll": [],
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.typeCheckingMode": "off",
+  "python.globalModuleInstallation": true,
+  "python.terminal.shellIntegration.enabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": true,
+  "workbench.panel.showLabels": false,
+  "dbcode.ai.mcp.authorization": "None",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "catppuccin-latte",
+  "editor.matchBrackets": "never"
+}
