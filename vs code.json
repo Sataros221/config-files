@@ -61,7 +61,19 @@
     "tab.activeBorder": "#eb6f92",
     "tab.unfocusedActiveBorder": "#ff000000",
     "menu.background": "#191724",
-    "editorCursor.foreground": "#eb6f92"
+    "editorCursor.foreground": "#eb6f92",
+    "editorBracketPairGuide.background1": "#ffb86ca8",
+    "editorBracketPairGuide.background2": "#B084EBa8",
+    "editorBracketPairGuide.background3": "#45A9F9a8",
+    "editorBracketPairGuide.background4": "#fab387a8",
+    "editorBracketPairGuide.background5": "#19f9d8a8",
+    "editorBracketPairGuide.background6": "#c9a0aca8",
+    "editorBracketPairGuide.activeBackground1": "#FFB86C",
+    "editorBracketPairGuide.activeBackground2": "#B084EB",
+    "editorBracketPairGuide.activeBackground3": "#45A9F9",
+    "editorBracketPairGuide.activeBackground4": "#fab387",
+    "editorBracketPairGuide.activeBackground5": "#19f9d8",
+    "editorBracketPairGuide.activeBackground6": "#c9a0ac"
   },
 
   "editor.unicodeHighlight.nonBasicASCII": false,
@@ -221,3 +233,4 @@
   "workbench.iconTheme": "catppuccin-latte",
   "editor.matchBrackets": "never"
 }
+
