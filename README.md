@@ -4,18 +4,18 @@
 
 ## VSCode
 
-![image](Images\vscode.png)
+<img src="Images\vscode.png" alt="image"/>
 
 ---
 
 ## Starship
 
-![image](Images\starship.png)
+<img src="Images\starship.png" alt="image"/>
 
 ---
 
 ## Vivaldi
 
-![image](Images\vivaldi.png)
+<img src="Images\vivaldi.png" alt="image"/>
 
 ---
