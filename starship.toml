@@ -1,264 +1,190 @@
-# Get editor completions based on the config schema
-"$schema" = "https://starship.rs/config-schema.json"
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Main format string, incorporating modules from both configurations.
 format = """
-[](red)\
-$os\
 $username\
-[](bg:maroon fg:red)\
 $directory\
-[](bg:gold fg:maroon)\
-$localip\
-[](bg:yellow fg:gold)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+$conda\
+$python\
+$fill\
 $git_branch\
 $git_status\
 $git_metrics\
-[](fg:yellow bg:flamingo)\
-$c\
-$rust\
-$golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:flamingo bg:lavender)\
 $time\
-[ ](fg:lavender)\
-$cmd_duration\
-$line_break\
-$character"""
+$cmd_duration\n  \
+[󰧱](fg:iris) \
+"""
 
-# Using the Catppuccin Mocha palette as the default.
-palette = 'catppuccin_mocha'
+palette = "rose-pine"
 
-# [OS & Username] - From moca-preset
-[os]
-disabled = false
-style = "bg:red fg:crust"
-[os.symbols]
-Windows = ""
-Ubuntu = "󰕈"
-Macos = "󰀵"
-Linux = "󰌽"
-Arch = "󰣇"
-# Add other OS symbols as needed
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+flamingo = "#f5c2e7"
 
-[username]
-show_always = true
-style_user = "bg:red fg:crust"
-style_root = "bg:red fg:crust"
-format = '[ $user]($style)'
-
-# [Directory] - Merged configuration
-# Using style and substitutions from moca-preset.
-# Using truncation_length and truncate_to_repo from catp for better context in repos.
 [directory]
-style = "bg:maroon fg:crust"
-format = "[ $path ]($style)"
-truncation_length = 4
-truncate_to_repo = true
+format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
+style = "bg:overlay fg:rose"
+truncation_length = 3
 truncation_symbol = "…/"
+
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+Documents = "󰈙"
+Downloads = " "
+Music = " "
+Pictures = " "
 
 [localip]
 ssh_only = false
-format = '[⨕ $localipv4]($style)'
-style = "bg:gold fg:crust"
+format = '[](fg:overlay)[𐋃 $localipv4]($style)[](fg:overlay)'
+style = "bg:overlay fg:flamingo"
 disabled = false
 
-# [Git] - Merged configuration
-# Using branch and status from moca-preset.
-# Adding git_metrics from catp.
+[fill]
+style = "fg:overlay"
+symbol = " "
+
 [git_branch]
+format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) "
+style = "bg:overlay fg:foam"
 symbol = ""
-style = "bg:yellow"
-format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
-style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+disabled = false
+style = "bg:overlay fg:love"
+format = '[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) '
+up_to_date = '[ ✓ ](bg:overlay fg:iris)'
+untracked = '[?\($count\)](bg:overlay fg:flamingo)'
+stashed = '[\$](bg:overlay fg:iris)'
+modified = '[!\($count\)](bg:overlay fg:flamingo)'
+renamed = '[»\($count\)](bg:overlay fg:iris)'
+deleted = '[✘\($count\)](style)'
+staged = '[++\($count\)](bg:overlay fg:flamingo)'
+ahead = '[⇡\(${count}\)](bg:overlay fg:foam)'
+diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
+behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
 
 [git_metrics]
-format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
-added_style = 'fg:flamingo bg:yellow'
-deleted_style = 'fg:red bg:yellow'
+format = '[](fg:overlay)([ $added ]($added_style))([ $deleted]($deleted_style))[](fg:overlay) '
+added_style = 'fg:flamingo bg:overlay'
+deleted_style = 'fg:love bg:overlay'
 ignore_submodules = true
 disabled = false
 
-# [Programming Languages] - From moca-preset
-[nodejs]
-symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:crust bg:flamingo)]($style)'
 
-[c]
-symbol = " "
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:crust bg:flamingo)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:crust bg:flamingo)]($style)'
-
-[python]
-symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:flamingo)]($style)'
-
-[golang]
-symbol = "ʕ⁠·⁠ᴥ⁠·⁠ʔ"
-style = "bg:flamingo"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:flamingo)]($style)'
-# Add other languages (golang, java, etc.) from moca-preset as needed
-
-# [Time] - From moca-preset (visually consistent)
 [time]
 disabled = false
-time_format = "%R"
-style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+format = " [](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)"
+style = "bg:overlay fg:rose"
+time_format = "%I:%M%P"
+use_12hr = true
 
-# [Command Duration] - From moca-preset
+[username]
+disabled = false
+format = "[](fg:overlay)[  $user ]($style)[](fg:overlay) "
+show_always = true
+style_root = "bg:overlay fg:love"
+style_user = "bg:overlay fg:love"
+
 [cmd_duration]
 show_milliseconds = true
-format = " in $duration "
-style = "bg:lavender fg:crust"
+format = " [](fg:overlay)[󱫪 in $duration ]($style)[](fg:overlay)"
+style = "bg:overlay fg:love"
 disabled = false
 show_notifications = true
 min_time_to_notify = 45000
 
-[line_break]
-disabled = false # Set to false to ensure the prompt starts on a new line
+# Languages
 
-# [Character] - Merged configuration
-# Using the symbol from catp with the style and simplicity of moca-preset.
-[character]
+[c]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
 disabled = false
-success_symbol = '[󰄛 ❯](fg:purple)'
-error_symbol = '[󰄛 ❯](fg:red)'
-vimcmd_symbol = '[❮](fg:flamingo)'
-vimcmd_replace_one_symbol = '[❮](italic fg:lavender)'
-vimcmd_replace_symbol = '[❮](italic fg:lavender)'
-vimcmd_visual_symbol = '[❮](italic fg:yellow)'
+symbol = " "
 
-# [Palettes] - Includes all Catppuccin variants from moca-preset for flexibility.
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f5c2e7"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#eb6f92"
-maroon = "#eba0ac"
-orange = "#ff6200ff"
-yellow = "#fab387"
-green = "#a6e3a1"
-gold = "#f6c177"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#c4a7e7"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[elixir]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
 
-[palettes.catppuccin_frappe]
-rosewater = "#f2d5cf"
-flamingo = "#eebebe"
-pink = "#f4b8e4"
-mauve = "#ca9ee6"
-red = "#e78284"
-maroon = "#ea999c"
-orange = "#ef9f76"
-yellow = "#e5c890"
-green = "#a6d189"
-gold = "#81c8be"
-sky = "#99d1db"
-sapphire = "#85c1dc"
-blue = "#8caaee"
-lavender = "#babbf1"
-text = "#c6d0f5"
-subtext1 = "#b5bfe2"
-subtext0 = "#a5adce"
-overlay2 = "#949cbb"
-overlay1 = "#838ba7"
-overlay0 = "#737994"
-surface2 = "#626880"
-surface1 = "#51576d"
-surface0 = "#414559"
-base = "#303446"
-mantle = "#292c3c"
-crust = "#232634"
+[elm]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
 
-[palettes.catppuccin_latte]
-rosewater = "#dc8a78"
-flamingo = "#dd7878"
-pink = "#ea76cb"
-mauve = "#8839ef"
-red = "#d20f39"
-maroon = "#e64553"
-orange = "#fe640b"
-yellow = "#df8e1d"
-green = "#40a02b"
-gold = "#179299"
-sky = "#04a5e5"
-sapphire = "#209fb5"
-blue = "#1e66f5"
-lavender = "#7287fd"
-text = "#4c4f69"
-subtext1 = "#5c5f77"
-subtext0 = "#6c6f85"
-overlay2 = "#7c7f93"
-overlay1 = "#8c8fa1"
-overlay0 = "#9ca0b0"
-surface2 = "#acb0be"
-surface1 = "#bcc0cc"
-surface0 = "#ccd0da"
-base = "#eff1f5"
-mantle = "#e6e9ef"
-crust = "#dce0e8"
+[golang]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = "ʕ⁠·⁠ᴥ⁠·⁠ʔ"
 
-[palettes.catppuccin_macchiato]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-orange = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-gold = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+[haskell]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
+
+[java]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
+
+[julia]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
+
+[nodejs]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = "󰎙 "
+
+[nim]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = "󰆥 "
+
+[rust]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
+
+[scala]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+disabled = false
+symbol = " "
+
+[python]
+style = "bg:overlay fg:foam"
+format = ' [](fg:overlay)[ $symbol( $version)(\($virtualenv\)) ]($style)[](fg:overlay)'
+disabled = false
+symbol = ' '
+
+[conda]
+style = "bg:overlay fg:foam"
+format = " [](fg:overlay)[ $symbol$environment ]($style)[](fg:overlay)"
+disabled = false
+symbol = '🅒 '
